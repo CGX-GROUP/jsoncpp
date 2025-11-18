@@ -42,7 +42,9 @@ endforeach()
 
 # Build the library with C++11 standard support, independent from other including
 # software which may use a different CXX_STANDARD or CMAKE_CXX_STANDARD.
-set(CMAKE_CXX_STANDARD 11)
+# C++17 is required to build `jsoncpp` with string_view support. This is required when
+# using `jsoncpp` in a project build with c++17
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
